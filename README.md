@@ -7,7 +7,7 @@ As the first near comprehensive benchmark study of protein representation method
 
 The study is summarized in the schematic workflow below.
 
-![ProtBENCH_workflow](https://user-images.githubusercontent.com/13165170/167012580-5cdb1d4f-650f-484b-b34a-b399984d36cd.png)
+![ProtBENCH_workflow](https://user-images.githubusercontent.com/13165170/167027598-d4b13b56-7266-4c22-897b-d847021fe462.png)
 
 Please refer to our pre-print for more information:
 
