@@ -24,6 +24,8 @@ DOI/URL: [10.1101/2022.05.01.490207](https://biorxiv.org/cgi/content/short/2022.
     * **large_scale** folder contains protein family-specific bioactivity datasets. For each protein family, bioactivity samples are distributed into train and test sets by applying three different splitting strategy, and involved in separate folders named **fully_dissimilar_split**, **dissimilar_compound_split**, and **random_split**. Protein representations and compound fingerprints used for all split datasets are stored in the **feature_vectors** folder.
 *	**scripts** folder includes script files required for the construction of models on different dataset scales. It also involves “score_metrics.py” script file utilized for performance calculation of PCM models on medium- and large-scale datasets.
 *	**results** folder contains test performance results of all models on each scale. 
+*	**initial_files** folder involves protein-protein and compound-compound pairwise similarity files as well as initial bioactivity datasets of each protein family required for "network_based_train_test_splitting.py" script file as input.
+*	**train_test_splitting** folder contains "network_based_train_test_splitting.py" script file to reproduce fully_dissimilar_split, dissimilar_compound_split, and random_split based train/test bioactivity files of large-scale protein family-specific datasets. It can be also used to split your own bioactivity datasets by supplying input files with required formats and adjusting partition parameters. 
 
 **Dependencies:**
 
@@ -31,6 +33,7 @@ DOI/URL: [10.1101/2022.05.01.490207](https://biorxiv.org/cgi/content/short/2022.
 * Scikit-learn 0.22.1
 * Pandas 1.1.5
 * Numpy 1.19.5
+* Python-louvain 0.13 (only required if the user runs "network_based_train_test_splitting.py" script)
 
 **Step-by-step operation:**
 1. We highly recommend you to use conda platform for installing dependencies properly. After installation of appropriate [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) version for your operating system, create and activate conda environment, and then install dependencies in the activated environment, as below:
@@ -40,10 +43,20 @@ conda activate protbench
 conda install -c anaconda scikit-learn=0.22.1
 conda install -c anaconda pandas=1.1.5
 pip install numpy==1.19.5
+pip install python-louvain==0.13
 ```
 2. Clone this repository.
+
+To run models directly;
+
 3. Download datasets from [here](https://drive.google.com/file/d/1zVOyFIEOo33yeF3vFE8paz5pS5H5Z99N/view?usp=sharing) and uncompress the “datasets.zip” file. Place the uncompressed folder in the cloned repository at the same level as the **results** and **scripts** folders. 
 4. Set the location of **scripts** folder as the current working directory, and run the corresponding script to build models at the data scale of your interest. Instead of creating all models of the selected scale at once, you can easily edit the script file according to your purpose before running it. You need to uncomment "save model" and "save predictions" code blocks in the script file to save the constructed model and its predicted outputs, respectively.
+
+To reproduce train/test split sets;
+
+3. Download input files from [here](https://drive.google.com/file/d/1d9ggqtmz9x0cBIdGAmR0URn2FpqX_zcH/view?usp=share_link) and uncompress the “initial_files.zip” file. Place the uncompressed folder into the **train_test_splitting** folder in the cloned repository.
+4. Make an empty folder with the name "final_files" and sub-folders "fully_dissimilar_split", "dissimilar_compound_split", and "random_split" in it to save the outputs.
+5. Run the "network_based_train_test_splitting.py" script by uncommenting the line of the splitting method and the family of interest. Please note that the fully-dissimilar-split datasets you created may differ a bit from the ones used in this study due to differences in partition parameters and further filtering operations used for the removal of datapoints with missing protein representations.
 
 **Example commands to run the scripts for building models of interest:**
    
