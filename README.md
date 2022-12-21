@@ -52,11 +52,11 @@ To run models directly;
 3. Download datasets from [here](https://drive.google.com/file/d/1zVOyFIEOo33yeF3vFE8paz5pS5H5Z99N/view?usp=sharing) and uncompress the “datasets.zip” file. Place the uncompressed folder in the cloned repository at the same level as the **results** and **scripts** folders. 
 4. Set the location of **scripts** folder as the current working directory, and run the corresponding script to build models at the data scale of your interest. Instead of creating all models of the selected scale at once, you can easily edit the script file according to your purpose before running it. You need to uncomment "save model" and "save predictions" code blocks in the script file to save the constructed model and its predicted outputs, respectively.
 
-To reproduce train/test split sets;
+To reproduce train/test splits;
 
 3. Download input files from [here](https://drive.google.com/file/d/1d9ggqtmz9x0cBIdGAmR0URn2FpqX_zcH/view?usp=share_link) and uncompress the “initial_files.zip” file. Place the uncompressed folder into the **train_test_splitting** folder in the cloned repository.
-4. Make an empty folder with the name "final_files" and sub-folders "fully_dissimilar_split", "dissimilar_compound_split", and "random_split" in it to save the outputs.
-5. Run the "network_based_train_test_splitting.py" script by uncommenting the line of the splitting method and the family of interest. Please note that the fully-dissimilar-split datasets you created may differ a bit from the ones used in this study due to differences in partition parameters and further filtering operations used for the removal of datapoints with missing protein representations.
+4. Create an empty folder with the name "final_files" and sub-folders "fully_dissimilar_split", "dissimilar_compound_split", and "random_split" in it to save the output.
+5. Run the "network_based_train_test_splitting.py" script by uncommenting the line of the splitting method and the family of interest. Please note that the fully-dissimilar-split datasets you create may slightly differ from the ones used in this study due to differences in partition parameters and further filtering operations used for the removal of data points with missing protein representations.
 
 **Example commands to run the scripts for building models of interest:**
    
