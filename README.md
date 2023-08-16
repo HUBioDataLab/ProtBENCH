@@ -9,11 +9,11 @@ The study is summarized in the schematic workflow below.
 
 ![ProtBENCH_workflow](https://user-images.githubusercontent.com/13165170/167027598-d4b13b56-7266-4c22-897b-d847021fe462.png)
 
-Please refer to our pre-print for more information:
+Please refer to our article for more information:
 
-Atas, H. & Doğan, T. (2022). How to Approach Machine Learning-based Prediction of Drug/ Compound-Target Interactions. *bioRxiv*, 2022.05.01.490207.
+Atas Guvenilir, H., Doğan, T. (2023). How to approach machine learning-based prediction of drug/compound–target interactions. *Journal of Cheminformatics*, 15:16.
 
-DOI/URL: [10.1101/2022.05.01.490207](https://biorxiv.org/cgi/content/short/2022.05.01.490207)
+DOI/URL: [10.1186/s13321-023-00689-w](https://doi.org/10.1186/s13321-023-00689-w)
 
 ## Programming Environment and Files
 **Descriptions of folders and files:**
