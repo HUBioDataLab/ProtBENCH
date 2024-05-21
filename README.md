@@ -1,4 +1,9 @@
 # ProtBENCH: A Comprehensive Benchmark for Machine Learning-based Prediction of Drug/Compound-Target Interactions
+
+<!-- omit in toc -->
+
+[![publication](https://img.shields.io/badge/Article-%40Cheminformatics%20J-00b6cf.svg)](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-023-00689-w) [![license](https://img.shields.io/badge/license-GPLv3-blue.svg)](http://www.gnu.org/licenses/)
+
 In this study/repository, we performed a rigorous benchmark analysis to investigate the representation capability of various protein featurization techniques together with different datasets (and their structured splits), modeling approaches and evaluation strategies for DTI prediction modelling. Below, we summarized the major contributions of our study to the literature:
 * We proposed protein family-specific challenging benchmark datasets with high coverage on both compound and protein spaces, which can be used as reliable, reference/gold-standard datasets for fair evaluation of models at multiple difficulty levels on DTI modelling tasks.
 * We employed a network-based strategy for splitting train/test folds of these protein family-specific datasets, which ensures that train and test folds are totally dissimilar from each other with a minimum loss of data points. Hence, it can aid researchers in designing more powerful and robust DTI prediction models that have a real translational value.
